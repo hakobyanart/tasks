@@ -2,9 +2,9 @@
 #include <unistd.h>
 
 struct Picture {
-        unsigned char red;
-        unsigned char green;
-        unsigned char blue;
+        short int red;
+        short int green;
+        short int blue;
 };
 void printer(Picture obj[][360], int cordx, int cordy) {
     std::cout << "The red value of promted cordinates is: " << obj[cordx][cordy].red << std::endl;
