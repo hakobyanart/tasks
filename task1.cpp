@@ -14,9 +14,9 @@ void printer(Picture obj[][360], int cordx, int cordy) {
 
 int main() {
     Picture mypic[640][360];
-    unsigned char red_val;
-    unsigned char green_val;
-    unsigned char blue_val;
+    short int red_val;
+    short int green_val;
+    short int blue_val;
     int x_cord;
     int y_cord;
     std::cout << "Enter the red value from 0 to 255: " << std::endl;
@@ -25,22 +25,30 @@ int main() {
         std::cout << "Wrong input! ";
         return -1;
     }
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.clear();
+
     std::cout << "Enter the green value from 0 to 255: " << std::endl;
     std::cin >> green_val;
     if(green_val < 0 || green_val > 255) {
         std::cout << "Wrong input! ";
         return -1;
     }
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.clear();
+
     std::cout << "Enter the blue value from 0 to 255: " << std::endl;
     std::cin >> blue_val;
     if(blue_val < 0 || blue_val > 255) {
         std::cout << "Wrong input! ";
         return -1;
     }
-    //sleep(1);
     std::cout << "The pics resolution is 640x360" << std::endl;
     sleep(1);
     std::cout << "Now enter the x cordinate to which you want to put the changes: " << std::endl;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.clear();
+
     std::cin >> x_cord;
     if(x_cord < 0 || x_cord > 640) {
         std::cout << "Invalid input! ";
